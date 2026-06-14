@@ -1,0 +1,19 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cheatsheet-tags}
+
+\RequirePackage{tcolorbox}
+\RequirePackage{core-colors}
+
+\newtcbox{\tag}{
+    on line,
+    boxrule=0pt,
+    colback=accent!15,
+    colframe=accent!15,
+    arc=4pt,
+    left=4pt,
+    right=4pt,
+    top=2pt,
+    bottom=2pt,
+    boxsep=0pt,
+    fontupper=\small\bfseries
+}

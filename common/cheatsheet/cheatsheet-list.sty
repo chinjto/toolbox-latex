@@ -1,0 +1,23 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cheatsheet-list}
+
+\RequirePackage{enumitem}
+\RequirePackage{core-colors}
+
+% Itemize: accent bullets
+\setlist[itemize]{
+    leftmargin=1.2em,
+    itemsep=0.15em,
+    topsep=0.2em,
+    label=\textcolor{accent}{\textbullet}
+}
+
+% Description: accent labels
+\setlist[description]{
+    leftmargin=1em,
+    itemsep=0.1em,
+    topsep=0.15em,
+    labelsep=0.6em,
+    font=\small\ttfamily\bfseries\color{accent!85!black},
+    style=sameline
+}

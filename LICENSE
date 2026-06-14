@@ -1,0 +1,46 @@
+# toolbox-latex
+
+Personal LaTeX toolbox containing reusable packages, templates and utilities used across my LaTeX projects.
+
+## Features
+
+* Reusable LaTeX packages (`.sty`)
+* Reusable document templates
+* Integration with TeX Live through the user `texmf` directory
+* Compatible with my `toolbox-make` project
+
+## Installation
+
+```bash
+make install
+```
+
+This command creates a symbolic link in:
+
+```text
+~/texmf/tex/latex/toolbox-latex
+```
+
+allowing TeX Live to discover the provided packages automatically.
+
+## Usage
+
+Example:
+
+```latex
+\usepackage{toolbox-core}
+```
+
+## Project structure
+
+```text
+.
+├── common/
+├── templates/
+├── Makefile
+└── README.md
+```
+
+## License
+
+MIT License.
