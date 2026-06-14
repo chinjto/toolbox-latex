@@ -13,3 +13,9 @@ install:
 
 uninstall:
 	rm -f $(LATEX_TOOLBOX_LINK)
+
+build:
+	@echo "Undefined goal 'build' for this project."
+
+version:
+	@echo "Undefined goal 'version' for this project."
