@@ -4,6 +4,8 @@ LATEX_TEXMF_DIR := $(HOME)/texmf/tex/latex
 LATEX_TOOLBOX_LINK := $(LATEX_TEXMF_DIR)/toolbox-latex
 LATEX_TOOLBOX_SOURCE := $(HOME)/.latex/common
 
+DEPLOY_SCRIPT = @echo "Undefined deploy script for this project."
+
 include $(HOME)/.make/git.mk
 
 install:
