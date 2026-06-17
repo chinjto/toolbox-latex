@@ -1,8 +1,12 @@
 .PHONY: install uninstall
 
 LATEX_TEXMF_DIR := $(HOME)/texmf/tex/latex
-LATEX_TOOLBOX_LINK := $(LATEX_TEXMF_DIR)/toolbox-latex
-LATEX_TOOLBOX_SOURCE := $(HOME)/.latex/common
+TOOLBOX_PACKAGES_DIR := $(HOME)/.latex/packages
+
+LATEX_NAMESPACE := chinjto
+
+LATEX_TOOLBOX_LINK := $(LATEX_TEXMF_DIR)/$(LATEX_NAMESPACE)
+LATEX_TOOLBOX_SOURCE := $(TOOLBOX_PACKAGES_DIR)/$(LATEX_NAMESPACE)
 
 DEPLOY_SCRIPT = @echo "Undefined deploy script for this project."
 
