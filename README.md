@@ -1,10 +1,10 @@
 # toolbox-latex
 
-Personal LaTeX toolbox containing reusable packages, templates and utilities used across my LaTeX projects.
+Personal LaTeX toolbox containing reusable packages and templates used across my LaTeX projects.
 
 ## Features
 
-* Reusable LaTeX packages (`.sty`)
+* Reusable LaTeX packages (`.sty`) and document classes (`.cls`)
 * Reusable document templates
 * Integration with TeX Live through the user `texmf` directory
 * Compatible with my `toolbox-make` project
@@ -15,9 +15,13 @@ Personal LaTeX toolbox containing reusable packages, templates and utilities use
 make install
 ```
 
-This command creates a symbolic link in `~/texmf/tex/latex/chinjto` into `chinjto` namespace folder.
+This command creates the `~/texmf/tex/latex/chinjto` symbolic link, allowing TeX Live to discover the provided packages automatically.
 
-allowing TeX Live to discover the provided packages automatically.
+Concretely, the link points to:
+
+```text
+~/texmf/tex/latex/chinjto -> ~/.latex/packages/chinjto
+```
 
 ## Usage
 
@@ -50,10 +54,10 @@ packages/
 
 Common packages shared across all document types.
 
-| Package               | Description                                                                          |
-|-----------------------|--------------------------------------------------------------------------------------|
-| `chinjto-core`        | Common utilities and shared configuration                                            |
-| `chinjto-core-colors` | Color palette definitions<br/>Change here accent value, if you wants to customize it |
+| Package               | Description                                                                  |
+|-----------------------|------------------------------------------------------------------------------|
+| `chinjto-core`        | Common utilities and shared configuration                                    |
+| `chinjto-core-colors` | Color palette definitions<br/>Change the `accent` value here to customize it |
 
 ### Cheatsheet
 
