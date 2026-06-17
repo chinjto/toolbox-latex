@@ -15,11 +15,7 @@ Personal LaTeX toolbox containing reusable packages, templates and utilities use
 make install
 ```
 
-This command creates a symbolic link in:
-
-```text
-~/texmf/tex/latex/toolbox-latex
-```
+This command creates a symbolic link in `~/texmf/tex/latex/chinjto` into `chinjto` namespace folder.
 
 allowing TeX Live to discover the provided packages automatically.
 
@@ -28,18 +24,55 @@ allowing TeX Live to discover the provided packages automatically.
 Example:
 
 ```latex
-\usepackage{core}
+\usepackage{chinjto-core}
 ```
 
-## Project structure
+## Available packages
+
+The toolbox is organized into reusable LaTeX packages grouped by domain. Each package can be used independently or through a higher-level package aggregating several modules.
 
 ```text
-.
-├── common/
-├── templates/
-├── Makefile
-└── README.md
+packages/
+└── chinjto/
+    ├── core/
+    │   ├── chinjto-core
+    │   └── chinjto-core-colors
+    ├── cheatsheet/
+    │   ├── chinjto-cheatsheet
+    │   ├── chinjto-cheatsheet-list
+    │   ├── chinjto-cheatsheet-section
+    │   └── chinjto-cheatsheet-tag
+    └── cv/
+        └── chinjto-cv-resume
 ```
+
+### Core
+
+Common packages shared across all document types.
+
+| Package               | Description                                                                          |
+|-----------------------|--------------------------------------------------------------------------------------|
+| `chinjto-core`        | Common utilities and shared configuration                                            |
+| `chinjto-core-colors` | Color palette definitions<br/>Change here accent value, if you wants to customize it |
+
+### Cheatsheet
+
+Packages dedicated to quick-reference and cheat sheet documents.
+
+| Package                      | Description                                                |
+|------------------------------|------------------------------------------------------------|
+| `chinjto-cheatsheet`         | Main cheatsheet package aggregating all cheatsheet modules |
+| `chinjto-cheatsheet-list`    | Custom list styles (`itemize`, `description`, ...)         |
+| `chinjto-cheatsheet-section` | Section and subsection styling                             |
+| `chinjto-cheatsheet-tag`     | Inline tags and badges                                     |
+
+### CV
+
+Packages dedicated to résumé generation.
+
+| Package             | Description           |
+|---------------------|-----------------------|
+| `chinjto-cv-resume` | Resume document class |
 
 ## License
 
